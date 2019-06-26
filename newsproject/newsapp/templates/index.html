@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+{% extends "base.html" %}
+{% block body_block %}
+
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+<!-- Optional theme -->
+  </head>
+  <body>
+    <div class="jumbotron" <style="color:black">
+
+      <h1 <style ="color:white">
+   Get The latest news on our website
+
+    </div>
+
+
+    <div class="container" style="font-size:20px;">
+      {% for new,des,i,j in mylist %}
+              <img src="{{ i }}" alt="">
+              <h1>news:</h1> {{ new }}
+              {{ value|linebreaks }}
+
+              <h2>description:</h2>{{ des }}
+              {{ value|linebreaks }}
+              <a href="{{ j }}">Read more</a>
+              {{ value|linebreaks }}
+              <hr>
+
+
+      {% endfor %}
+    </div>
+
+  </body>
+</html>
+{% endblock %}
